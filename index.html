@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reveal Text</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .text {
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .text span {
+            display: block;
+            opacity: 0;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .text:first-child span {
+            animation: slide .75s .4s forwards;
+            color: orange;
+        }
+
+        .text:last-child span {
+            animation: slide .9s .6s forwards;
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 1;
+                transform: translate3d(0, 120%, 0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate3d(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="text">
+            <span>This is first Text</span>
+        </div>
+        <div class="text">
+            <span>This is second Text</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
